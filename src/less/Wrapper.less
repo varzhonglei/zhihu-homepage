@@ -1,0 +1,48 @@
+.wrapper{
+    width: 960px;
+    min-height: 340px;
+    padding: 25px 0 50px;
+    margin: 45px auto 0;
+    .content{
+        min-height: 340px;
+        width: 100%;
+    }
+    .con-left{
+        float:left;
+        .con-left-in{
+            min-height: 340px;
+            margin-right:320px;
+        }      
+    }
+    .con-right{
+        float: left;
+        margin-left: -300px;
+        width: 300px;
+        min-height: 340px;
+        position: relative;//提高层级，避免被左边盖住
+    }  
+}
+
+
+@media (max-width: 959px) and (min-width: 768px){
+    .wrapper {
+        width: auto;
+        padding-left: 6px;
+        padding-right: 6px;
+    }
+}
+
+@media (max-width: 767px){
+    .con-right {
+        display: none;
+        margin: 0;
+    }
+    .con-left-in#power {
+        margin-right: 0;
+    }
+    .wrapper {
+        width: auto;
+        padding-left: 6px;
+        padding-right: 6px;
+    }
+}

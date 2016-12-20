@@ -1,0 +1,91 @@
+.menu{
+    margin-bottom: 20px;
+}
+.home-entry-avatar{
+    float: left;
+}
+.home-entry-menu{
+    margin-left: 68px;
+    height: 48px;
+    line-height: 48px;
+    background: #fafafa;
+    border: 1px solid #f0f0f0;
+    border-radius: 4px;
+    position: relative;
+    .arrow{
+        width: 10px;
+        height: 10px;
+        overflow: hidden;
+        position: absolute;
+        left: -10px;
+        top: 10px;
+    }
+    .arrow:before{
+        content: '';
+        position: absolute;
+        width: 0;
+        height: 0;
+        border: solid transparent;
+        top: 0;
+        left: 0;
+        border-top-color: #f0f0f0;
+        border-width: 14px;
+    }
+    .arrow:after{
+        top: 1px;
+        left: 2px;
+        content: '';
+        position: absolute;
+        width: 0;
+        height: 0;
+        border: solid transparent;
+        border-top-color: #fafafa;
+        border-width: 13px;
+    }
+    .home-entry-instance{
+        float: left;
+        height: 50px;
+        padding: 0 32px 0 27px;
+        position: relative;
+        font-size: 14px;
+        a{
+            color: #6c829f;
+            vertical-align: 8px;    
+        }
+        .menu-icon{
+            display: inline-block;
+            background-image: url(../img/menu-icon.png);
+            background-repeat: no-repeat;
+            width: 24px;
+            height: 24px;
+            margin-top: 15px;
+        }
+        .menu-icon-first{
+            background-position: -148px -30px;
+        }
+        .menu-icon-second{
+            background-position: -96px -30px;
+        }
+        .menu-icon-third{
+            background-position: -122px -56px;
+        }
+        .menu-icon-third:after, .menu-icon-second:after {
+            content: '';
+            position: absolute;
+            width: 1px;
+            height: 20px;
+            left: 0;
+            top: 50%;
+            margin-top: -10px;
+            background: #f0f0f0;
+        }
+    }
+    .home-entry-draft{
+        float: right;
+        margin-right: 20px;
+        line-height: 49px;
+        a{
+           color: #6c829f; 
+        }
+    }
+}
