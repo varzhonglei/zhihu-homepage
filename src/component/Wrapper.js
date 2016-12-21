@@ -13,7 +13,7 @@ var Wrapper = React.createClass({
                         <div className="con-left">
                             <div className="con-left-in" id="power">
                                 <FunctionMenu/>
-                                <FeedBox/>
+                                <FeedBox state={this.props.state}/>
                             </div>
                         </div>
                         <div className="con-right">

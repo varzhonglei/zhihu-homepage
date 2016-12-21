@@ -15,8 +15,7 @@
         margin: 0 auto;
         clear: both;
         .nav-left{
-            float: left;
-            height: inherit;                
+            height: inherit;               
         }
         a.logo{
             float: left;
@@ -51,7 +50,9 @@
             }
         }        
         .nav-right{
-            float: right;
+            position: absolute;
+            top: 0;
+            right: 0;
             font-size: 14px;                 
         }
         .question{
@@ -79,6 +80,8 @@
             }
         }
         .user-info{
+            position: relative;
+            z-index: 9999;
             float: right;
             width: 145px;
             &:hover .user-more{
@@ -130,5 +133,27 @@
                 text-align: center;
             }
         }        
+    }
+}
+
+@media (max-width: 959px) and (min-width: 768px){
+    .navigator{
+        position: static;
+    }
+    .navigator .nav-center {
+        width: auto;
+        padding-left: 6px;
+        padding-right: 6px;
+    }
+}
+
+@media (max-width: 767px){
+    .navigator{
+        position: static;
+    }
+    .navigator .nav-center {
+        width: auto;
+        padding-left: 6px;
+        padding-right: 6px;
     }
 }
