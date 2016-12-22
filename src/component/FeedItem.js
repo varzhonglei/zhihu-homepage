@@ -2,23 +2,34 @@ import React from 'react';
 import '../less/FeedItem.less';
 
 var FeedItem = React.createClass({
+    componentDidMount: function () {
+        var info = this.props.info;
+        let id = info.id;
+        this.refs[id].onclick = function () {
+            var temp = document.getElementById(id);
+           if(temp.getAttribute('class') == 'feed-summary'){
+               temp.setAttribute('class', '');
+           }else{
+               temp.setAttribute('class', 'feed-summary')
+           }
+        }
+    },
     render: function () {
-        console.log(this.props.info,'item')
         var info = this.props.info;
         return (
                <div className="feed-item-inner">
                    <div className="feed-main">
                        <div className="avatar">
-                           <a href="">
+                           <a href="#">
                                <img src={info.image} alt=""/>
                            </a>
                        </div>
-                       <div className="feed-source"> <span className="feed-gray-text">热门回答，来自：</span><a href="" className="feed-gray-text">{info.source}</a></div>
+                       <div className="feed-source"> <span className="feed-gray-text">热门回答，来自：</span><a href="#" className="feed-gray-text">{info.source}</a></div>
                        <div className="feed-content">
                            <h2 className="feed-title"><a href="#">{info.title}</a></h2>
                            <div className="feed-content-detailed">
                                <div className="feed-author-info feed-gray-text"><a href="#" className="author-name">{info.auther}</a> author的其他介绍</div>
-                               <div className="feed-summary">
+                               <div className="feed-summary" ref={info.id} id={info.id}>
                                     {info.summary}
                                </div>
                                <div className="feed-meta">

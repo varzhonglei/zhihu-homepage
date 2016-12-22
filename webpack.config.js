@@ -8,7 +8,7 @@ module.exports = {
         // 打包文件的路径 （当使用webpack服务是    文件是 static下面的子目录 ）
         filename: '[name].js',
         // 把资源发到 线上地址 
-        publicPath: 'http://localhost:8080/static/'
+        publicPath: './static/'
     },
     module: {
         loaders: [{

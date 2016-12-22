@@ -2,13 +2,15 @@ import React from 'react';
 import '../less/Input.less';
 
 var Input = React.createClass({
+    ownHandlerChange: function () {
+        var seekContent = this.refs.inp.value;
+        this.props.handlerChange(seekContent)
+    },
     render: function () {
         return (
             <div className="search">
-                 <form action="#" method="GET">
-                     <input type="text" name='q'/>
-                     <button className="btn-search"><span className="icon-search"></span></button>
-                 </form>
+                     <input type="text" name='q' ref='inp'/>
+                     <button className="btn-search" onClick={this.ownHandlerChange}><span className="icon-search"></span></button>
             </div>          
         )
     }

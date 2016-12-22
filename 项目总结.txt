@@ -13,7 +13,7 @@
     </div>
     最后通过媒体查询让 wrapper取消margin；然后让宽自适应
 
-    我的两种想法： 
+    学过的两栏布局 
     理应优点：左边元素非浮动元素了。性能应该更右化
     //一般两栏布局
     <div class='wrapper'>            //首先宽写死，高内容撑开，两遍用margin自适应使整体居中；
@@ -28,17 +28,12 @@
     </div>
     同样媒体查询
 
-    想法2
-    <div class='wrapper'>            //自适应
-        <div class="content">        // 宽高自适应
-            <div class="con-left">   // 不浮动；设置右margin-right: 320px; （给右边内容留出空间） ————————》》外加左边距
-                    内容
-            </div>
-            <div class="con-right"> //右浮动，margin-left:-300px;  ——————》》外加右边距
-                内容
-            </div>
-        </div>
-    </div>
-    通过媒体查询取消外加左右边距
+react的 state状态不可以随便改动，最好是通过 setState方法来改，不然出的错你怎么都想不明白
+
+react中给组件绑定事件不能直接绑定在真实的Dom上，必须绑定在虚拟的Dom上，通过refs实现
+
+react中要特别注意每个方法的执行环境（其中this的指向）。
+
+
 
 

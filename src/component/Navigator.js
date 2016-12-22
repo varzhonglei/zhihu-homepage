@@ -4,12 +4,13 @@ import Input from './Input.js';
 
 var Navigator = React.createClass({
     render: function () {
+                
         return (
                 <div className='navigator'>
                     <div className='nav-center'>
                         <div className='nav-left'>
                             <a href="#" className="logo">知乎</a>
-                            <Input/>
+                            <Input handlerChange={this.props.handlerChange}/>
                             <ul className="nav-menu">
                                 <li className="nav-instance"><a href="#">首页</a></li>
                                 <li className="nav-instance"><a href="#">发现</a></li>
